@@ -19,15 +19,15 @@ async def _verify(bot, message):
     try:       
        user = await bot.get_users(user_id)
     except:
-       return await message.reply(f"❌ {user_name} Need to start me in PM!")
+       return await message.reply(f"❌ {user_name} Need to start me in raj PM!")
     if message.from_user.id != user_id:
-       return await message.reply(f"<b>Only {user.mention} can use this command 😁</b>")
+       return await message.reply(f"<b>Only {user.mention} raj says can use this command 😁</b>")
     if verified==True:
-       return await message.reply("<b>This Group is already verified!</b>")
+       return await message.reply("<b>raj says This Group is already verified!</b>")
     try:
        link = (await bot.get_chat(message.chat.id)).invite_link     
     except:
-       return message.reply("❌ <b>Make me admin here with all permissions!</b>")    
+       return message.reply("❌ <b>raj says Make me admin here with all permissions!</b>")    
            
     text  = f"#NewRequest\n\n"
     text += f"User: {message.from_user.mention}\n"
@@ -41,7 +41,7 @@ async def _verify(bot, message):
                            reply_markup=InlineKeyboardMarkup(
                                                  [[InlineKeyboardButton("✅ Approve", callback_data=f"verify_approve_{message.chat.id}"),
                                                    InlineKeyboardButton("❌ Decline", callback_data=f"verify_decline_{message.chat.id}")]]))
-    await message.reply("💢 <b>Verification Request sent ✅\n🔻 We will notify You Personally when it is approved</b> ⭕")
+    await message.reply("💢 <b>raj says Verification Request sent ✅\n🔻 We will notify You Personally when it is approved</b> ⭕")
 
 
 @Client.on_callback_query(filters.regex(r"^verify"))
