@@ -13,11 +13,11 @@ import asyncio
 @Client.on_message(filters.command('broadcast') & filters.user(ADMIN))
 async def broadcast(bot, message):
     if not message.reply_to_message:
-       return await message.reply("Use this command as a reply to any message!")
+       return await message.reply("raj says Use this command as a reply to any message!")
     m=await message.reply("Please wait...")   
 
     count, users = await get_users()
-    stats     = "⚡ Broadcast Processing.."
+    stats     = "⚡ raj says Broadcast Processing.."
     br_msg    = message.reply_to_message
     total     = count       
     remaining = total
@@ -37,7 +37,7 @@ async def broadcast(bot, message):
            await m.edit(script.BROADCAST.format(stats, total, remaining, success, failed))                                 
         except:
            pass
-    stats = "✅ Broadcast Completed"
+    stats = "✅ raj says Broadcast Completed"
     await m.reply(script.BROADCAST.format(stats, total, remaining, success, failed)) 
     await m.delete()                                
       
@@ -45,11 +45,11 @@ async def broadcast(bot, message):
 @Client.on_message(filters.command('broadcast_groups') & filters.user(ADMIN))
 async def grp_broadcast(bot, message):
     if not message.reply_to_message:
-       return await message.reply("Use this command as a reply to any message!")
+       return await message.reply("raj says Use this command as a reply to any message!")
     m=await message.reply("Please wait...")   
 
     count, groups = await get_groups()
-    stats     = "⚡ Broadcast Processing.."
+    stats     = "⚡ raj says Broadcast Processing.."
     br_msg    = message.reply_to_message
     total     = count       
     remaining = total
@@ -69,7 +69,7 @@ async def grp_broadcast(bot, message):
            await m.edit(script.BROADCAST.format(stats, total, remaining, success, failed))                                 
         except:
            pass
-    stats = "✅ Broadcast Completed"
+    stats = "✅ raj says Broadcast Completed"
     await m.reply(script.BROADCAST.format(stats, total, remaining, success, failed)) 
     await m.delete()
 
