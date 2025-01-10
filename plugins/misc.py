@@ -18,8 +18,8 @@ async def start(bot, message):
         InlineKeyboardButton("ʜᴇʟᴘ", callback_data="misc_help"),
         InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="misc_about")
     ],[
-        InlineKeyboardButton("🤖 ᴜᴘᴅᴀᴛᴇ", url="https://t.me/Movieupdatewithak"),
-        InlineKeyboardButton("🔍 ɢʀᴏᴜᴘ", url="https://t.me/+EiW4jRFXjqE5OGM1")
+        InlineKeyboardButton("🤖 ᴜᴘᴅᴀᴛᴇ", url="https://t.me/+H-l9E4CaQ8pmZDBl"),
+        InlineKeyboardButton("🔍 ɢʀᴏᴜᴘ", url="https://t.me/+H-l9E4CaQ8pmZDBl")
     ]]
     await message.reply(text=script.START.format(message.from_user.mention),
                         disable_web_page_preview=True,
